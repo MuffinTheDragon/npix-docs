@@ -12,9 +12,15 @@ export default function Home() {
 					15+ Clean and minimal components you can use for your apps.
 					Install the ones you need, make whatever changes you want.
 				</p>
-				<div className="mb-8">
+				<div className="mb-8 inline-flex space-x-4">
 					<Link href="/docs/introduction">
 						<Button type="primary">Read docs</Button>
+					</Link>
+					<Link
+						href="https://github.com/MuffinTheDragon/npix/"
+						target="_blank"
+					>
+						<Button type="link">View code</Button>
 					</Link>
 				</div>
 			</div>

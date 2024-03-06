@@ -3,7 +3,7 @@ import { GeistSans } from "geist/font/sans";
 import "./globals.css";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import { Topbar } from "@/components/Topbar";
-import { Sidebar } from "@/components/Sidebar";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 export const metadata: Metadata = {
 	title: "npix",
@@ -27,6 +27,7 @@ export default function RootLayout({
 				>
 					<Topbar />
 					<div>{children}</div>
+					<SpeedInsights />
 				</ThemeProvider>
 			</body>
 		</html>
