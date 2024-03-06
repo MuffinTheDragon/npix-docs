@@ -44,7 +44,7 @@ export const Sidebar = () => {
 	];
 
 	const navbar = (
-		<div className="grid gap-y-4 max-w-fit overflow-auto ps-4">
+		<div className="grid gap-y-4 overflow-auto ps-4">
 			{tabs.map((i) => {
 				if (i.path === "")
 					return (
