@@ -25,7 +25,7 @@ export const Topbar = () => {
 	const img = theme === "light" || !mounted ? GithubLight : GithubDark;
 
 	return (
-		<div className="flex justify-center top-0 items-center m-0 p-[10px] w-[calc(100%-20px)] sticky backdrop-blur">
+		<div className="flex justify-center top-0 items-center m-0 p-[10px] w-[calc(100%-20px)] sticky backdrop-blur z-50">
 			<div className="p-2 flex justify-between items-center border-b border-border/40 w-full m-0">
 				<a
 					className="text-xl font-bold inline-flex items-center"
