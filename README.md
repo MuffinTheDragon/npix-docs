@@ -5,3 +5,5 @@
 npix is a fully customizable collection of UI components built for React/NextJS using Tailwind.
 
 This repo contains code for the docs site. To see the repo for CLI, go <a href="https://github.com/MuffinTheDragon/npix/">here</a>
+
+View the live docs site <a href="https://npix.vercel.app/">here</a>
