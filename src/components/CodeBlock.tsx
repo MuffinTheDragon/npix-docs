@@ -23,7 +23,7 @@ export const CodeBlock = ({ children }: { children: string }) => {
 		await navigator.clipboard.writeText(children?.toString() ?? "");
 	};
 	return (
-		<div className="relative w-full rounded-md bg-[#1d2127] p-4 inline-flex justify-between items-start max-h-[400px] overflow-auto">
+		<div className="relative w-full rounded-md bg-[#1d2127] p-1 md:p-2 inline-flex justify-between items-start max-h-[400px] overflow-auto">
 			<SyntaxHighlighter
 				language="javascript"
 				style={gradientDark}
@@ -35,7 +35,7 @@ export const CodeBlock = ({ children }: { children: string }) => {
 				type="ghost"
 				size="small"
 				onClick={handleCopy}
-				className="focus:ring-0 hover:bg-gray-700"
+				className="focus:ring-0 hover:bg-gray-700 mt-2"
 			>
 				<div className="w-4 h-4 text-white">
 					{copied ? <CheckIcon /> : <DocumentDuplicateIcon />}

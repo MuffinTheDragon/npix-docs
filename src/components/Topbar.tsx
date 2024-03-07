@@ -8,6 +8,7 @@ import Image from "next/image";
 import GithubDark from "@/app/github-mark-white.png";
 import GithubLight from "@/app/github-mark.png";
 import Link from "next/link";
+import { Sidebar } from "./Sidebar";
 
 export const Topbar = () => {
 	const [mounted, setMounted] = useState(false);
@@ -25,16 +26,19 @@ export const Topbar = () => {
 	const img = theme === "light" || !mounted ? GithubLight : GithubDark;
 
 	return (
-		<div className="p-3 top-0 sticky z-50 border-b border-border/40 backdrop-blur">
+		<div className="py-3 top-0 sticky z-50 border-b border-border/40 backdrop-blur bg-background/40">
 			<div className="flex justify-between items-center m-auto md:max-w-[1400px] w-full">
 				<a
-					className="text-xl font-bold inline-flex items-center"
+					className="text-xl font-bold inline-flex items-center max-md:hidden ps-3"
 					href="/"
 				>
 					<Image src={logo} alt="logo" width={24} height={24} />
 					npix
 				</a>
-				<div className="flex gap-2">
+				<div className="md:hidden">
+					<Sidebar />
+				</div>
+				<div className="flex gap-2 pe-3">
 					<Link
 						href="https://github.com/MuffinTheDragon/npix/"
 						target="_blank"
