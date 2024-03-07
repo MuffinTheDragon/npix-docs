@@ -23,7 +23,7 @@ export default function Home() {
 			</p>
 			<p>You can pass in the following parameters:</p>
 			<p>
-				<code className="flex p-6 w-fit">
+				<code className="flex p-6 w-fit bg-[#1d2127] text-white">
 					[components]: Space separated list of components to add
 					<br />
 					-a OR --all: Add all components <br />
