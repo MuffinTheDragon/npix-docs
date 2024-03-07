@@ -10,7 +10,7 @@ export const SimpleTable = (props: Props) => {
 			<div className="md:hidden">
 				{data.map((row, rowIndex) => (
 					<div key={rowIndex}>
-						<p className="bg-secondary/40 rounded-md p-2 w-fit">
+						<p className="bg-secondary/40 rounded-md px-2 py-1 w-fit">
 							{row.field}
 						</p>
 						<div>
