@@ -83,7 +83,6 @@ export const Sidebar = () => {
 				handleClose={() => setOpen(false)}
 				title="npix"
 				placement="left"
-				className="max-w-[300px]"
 			>
 				{navbar}
 			</Drawer>

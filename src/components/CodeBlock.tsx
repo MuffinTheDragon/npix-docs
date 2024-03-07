@@ -35,7 +35,7 @@ export const CodeBlock = ({ children }: { children: string }) => {
 				type="ghost"
 				size="small"
 				onClick={handleCopy}
-				className="focus:ring-0 hover:bg-gray-700 mt-2"
+				className="focus:ring-0 hover:bg-gray-700 mt-2	"
 			>
 				<div className="w-4 h-4 text-white">
 					{copied ? <CheckIcon /> : <DocumentDuplicateIcon />}
