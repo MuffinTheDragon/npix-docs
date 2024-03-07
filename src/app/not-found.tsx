@@ -1,6 +1,6 @@
 export default function Home() {
 	return (
-		<div className="flex p-96 justify-center items-center">
+		<div className="flex p-24 md:p-36 lg:p-96 justify-center items-center">
 			<span className="font-semibold border-e border-border pe-4 text-3xl">
 				404
 			</span>
