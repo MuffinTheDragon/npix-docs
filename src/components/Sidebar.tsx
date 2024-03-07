@@ -4,6 +4,8 @@ import { Bars4Icon } from "@heroicons/react/20/solid";
 import { Button } from "./Button";
 import { Drawer } from "./Drawer";
 import { useState } from "react";
+import Image from "next/image";
+import logo from "@/app/icon-nobackground.png";
 
 type Tabs = {
 	name: string;
@@ -81,10 +83,18 @@ export const Sidebar = () => {
 			<Drawer
 				isOpen={open}
 				handleClose={() => setOpen(false)}
-				title="npix"
 				placement="left"
 			>
-				{navbar}
+				<div className="-mt-1">
+					<a
+						className="font-bold inline-flex items-center ps-3 -mt-2"
+						href="/"
+					>
+						<Image src={logo} alt="logo" width={24} height={24} />
+						npix
+					</a>
+					{navbar}
+				</div>
 			</Drawer>
 			<div className="max-md:hidden">{navbar}</div>
 		</div>
