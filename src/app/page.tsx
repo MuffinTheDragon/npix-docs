@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function Home() {
 	return (
-		<div className="flex p-24 md:p-36 lg:p-96 flex-col text-center border-b border-border justify-center items-center">
+		<div className="flex px-4 py-24 md:p-36 lg:p-96 flex-col text-center border-b border-border justify-center items-center">
 			<div className="m-auto">
 				<h1 className="header text-2xl md:text-4xl lg:text-6xl">
 					Fully customizable React UI Components
