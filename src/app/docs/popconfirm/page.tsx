@@ -1,15 +1,15 @@
 "use client";
 
-import { Card } from "@/components/Card";
 import { CodeBlock } from "@/components/CodeBlock";
 import { Popconfirm } from "@/components/Popconfirm";
 import { SimpleTable } from "@/components/SimpleTable";
-import { Switch } from "@/components/Switch";
 import { Button } from "@/components/Button";
 import { useState } from "react";
 import { Select } from "@/components/Select";
 import { Example } from "@/components/Example";
 import reactElementToJSXString from "react-element-to-jsx-string";
+import { ArrowRightIcon, ArrowLeftIcon } from "@heroicons/react/24/solid";
+import Link from "next/link";
 
 export default function Home() {
 	const [placement, setPlacement] = useState<
@@ -122,6 +122,21 @@ export default function Home() {
 			</CodeBlock>
 			<div className="sub-heading">API</div>
 			<SimpleTable data={data} />
+
+			<div className="flex justify-between">
+				<Link href="/docs/modal">
+					<Button className="flex space-x-2">
+						<ArrowLeftIcon className="w-5 h-5" />
+						<p>Previous</p>
+					</Button>
+				</Link>
+				<Link href="/docs/radio">
+					<Button className="flex space-x-2">
+						<p>Next</p>
+						<ArrowRightIcon className="w-5 h-5" />
+					</Button>
+				</Link>
+			</div>
 		</div>
 	);
 }

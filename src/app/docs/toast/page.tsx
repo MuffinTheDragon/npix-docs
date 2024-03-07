@@ -6,7 +6,12 @@ import { Example } from "@/components/Example";
 import { Select } from "@/components/Select";
 import { SimpleTable } from "@/components/SimpleTable";
 import { toast } from "@/components/Toast";
-import { CheckCircleIcon } from "@heroicons/react/24/solid";
+import {
+	ArrowLeftIcon,
+	CheckCircleIcon,
+	ArrowRightIcon,
+} from "@heroicons/react/24/solid";
+import Link from "next/link";
 import { useState } from "react";
 
 export default function Home() {
@@ -112,6 +117,21 @@ export default function Home() {
 </>`}</CodeBlock>
 			<div className="sub-heading">API</div>
 			<SimpleTable data={data} />
+
+			<div className="flex justify-between">
+				<Link href="/docs/tabs">
+					<Button className="flex space-x-2">
+						<ArrowLeftIcon className="w-5 h-5" />
+						<p>Previous</p>
+					</Button>
+				</Link>
+				<Link href="/docs/tooltip">
+					<Button className="flex space-x-2">
+						<p>Next</p>
+						<ArrowRightIcon className="w-5 h-5" />
+					</Button>
+				</Link>
+			</div>
 		</div>
 	);
 }

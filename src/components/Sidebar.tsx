@@ -73,7 +73,7 @@ export const Sidebar = () => {
 		<div>
 			<Button
 				type="ghost"
-				className="md:hidden"
+				className="md:hidden ms-1"
 				onClick={() => setOpen(!open)}
 			>
 				<Bars4Icon className="w-5 h-5" />

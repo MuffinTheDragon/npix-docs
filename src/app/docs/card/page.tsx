@@ -7,8 +7,10 @@ import { Example } from "@/components/Example";
 import { Input } from "@/components/Input";
 import { SimpleTable } from "@/components/SimpleTable";
 import { Switch } from "@/components/Switch";
+import Link from "next/link";
 import { useState } from "react";
 import reactElementToJSXString from "react-element-to-jsx-string";
+import { ArrowRightIcon, ArrowLeftIcon } from "@heroicons/react/24/solid";
 
 export default function Home() {
 	const [interactive, setInteractive] = useState(false);
@@ -82,6 +84,21 @@ export default function Home() {
 			</CodeBlock>
 			<div className="sub-heading">API</div>
 			<SimpleTable data={data} />
+
+			<div className="flex justify-between">
+				<Link href="/docs/button-group">
+					<Button className="flex space-x-2">
+						<ArrowLeftIcon className="w-5 h-5" />
+						<p>Previous</p>
+					</Button>
+				</Link>
+				<Link href="/docs/checkbox">
+					<Button className="flex space-x-2">
+						<p>Next</p>
+						<ArrowRightIcon className="w-5 h-5" />
+					</Button>
+				</Link>
+			</div>
 		</div>
 	);
 }

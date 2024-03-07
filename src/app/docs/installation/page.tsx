@@ -3,10 +3,11 @@
 import { Button } from "@/components/Button";
 import { CodeBlock } from "@/components/CodeBlock";
 import Link from "next/link";
+import { ArrowRightIcon, ArrowLeftIcon } from "@heroicons/react/24/solid";
 
 export default function Installation() {
 	return (
-		<div className="space-y-6">
+		<div className="space-y-4">
 			<h1 className="header">Installation</h1>
 			<div className="sub-heading">1. Create project</div>
 			<p> To get started, create a new project using Next.js</p>
@@ -45,6 +46,20 @@ export default function Installation() {
 				</a>{" "}
 				page
 			</p>
+			<div className="flex justify-between">
+				<Link href="/docs/introduction">
+					<Button className="flex space-x-2">
+						<ArrowLeftIcon className="w-5 h-5" />
+						<p>Previous</p>
+					</Button>
+				</Link>
+				<Link href="/docs/cli">
+					<Button className="flex space-x-2">
+						<p>Next</p>
+						<ArrowRightIcon className="w-5 h-5" />
+					</Button>
+				</Link>
+			</div>
 		</div>
 	);
 }

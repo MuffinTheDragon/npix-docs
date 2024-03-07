@@ -6,6 +6,8 @@ import { CodeBlock } from "@/components/CodeBlock";
 import { Example } from "@/components/Example";
 import { Input } from "@/components/Input";
 import { Tabs } from "@/components/Tabs";
+import Link from "next/link";
+import { ArrowRightIcon, ArrowLeftIcon } from "@heroicons/react/24/solid";
 import reactElementToJSXString from "react-element-to-jsx-string";
 
 const example = (
@@ -95,6 +97,20 @@ export default function Home() {
 			<CodeBlock>{`${reactElementToJSXString(example, {
 				showFunctions: true,
 			})}`}</CodeBlock>
+			<div className="flex justify-between">
+				<Link href="/docs/switch">
+					<Button className="flex space-x-2">
+						<ArrowLeftIcon className="w-5 h-5" />
+						<p>Previous</p>
+					</Button>
+				</Link>
+				<Link href="/docs/toast">
+					<Button className="flex space-x-2">
+						<p>Next</p>
+						<ArrowRightIcon className="w-5 h-5" />
+					</Button>
+				</Link>
+			</div>
 		</div>
 	);
 }

@@ -1,5 +1,8 @@
 import Image from "next/image";
 import logo from "@/app/icon.png";
+import Link from "next/link";
+import { Button } from "@/components/Button";
+import { ArrowRightIcon } from "@heroicons/react/24/solid";
 
 export default function Home() {
 	return (
@@ -24,6 +27,15 @@ export default function Home() {
 				<li>Get some exposure to CLI scripting</li>
 				<li>Do some UI testing</li>
 			</ol>
+
+			<div className="float-right">
+				<Link href="/docs/installation">
+					<Button className="flex space-x-2">
+						<p>Next</p>
+						<ArrowRightIcon className="w-5 h-5" />
+					</Button>
+				</Link>
+			</div>
 		</div>
 	);
 }

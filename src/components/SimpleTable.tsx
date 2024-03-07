@@ -14,7 +14,7 @@ export const SimpleTable = (props: Props) => {
 							{row.field}
 						</p>
 						<div>
-							<pre className="text-gray-400">{row.type}</pre>
+							<p className="text-gray-400">{row.type}</p>
 							<p>{row.description}</p>
 						</div>
 						<hr className="border-border my-4" />

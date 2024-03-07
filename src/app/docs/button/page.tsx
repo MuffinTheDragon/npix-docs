@@ -1,6 +1,6 @@
 "use client";
 
-import { Button as ButtonComponent } from "@/components/Button";
+import { Button } from "@/components/Button";
 import { CodeBlock } from "@/components/CodeBlock";
 import { Select } from "@/components/Select";
 import { SimpleTable } from "@/components/SimpleTable";
@@ -9,6 +9,8 @@ import { ButtonProps, ButtonSize, ButtonType } from "@/components/Button";
 import { useState } from "react";
 import { Example } from "@/components/Example";
 import reactElementToJSXString from "react-element-to-jsx-string";
+import Link from "next/link";
+import { ArrowRightIcon, ArrowLeftIcon } from "@heroicons/react/24/solid";
 
 export default function Home() {
 	const [props, setProps] = useState<ButtonProps>();
@@ -43,7 +45,7 @@ export default function Home() {
 
 	const example = (
 		<>
-			<ButtonComponent {...props}>Save</ButtonComponent>
+			<Button {...props}>Save</Button>
 		</>
 	);
 
@@ -128,6 +130,20 @@ export default function Home() {
 
 			<div className="sub-heading">API</div>
 			<SimpleTable data={data} />
+			<div className="flex justify-between">
+				<Link href="/docs/alert">
+					<Button className="flex space-x-2">
+						<ArrowLeftIcon className="w-5 h-5" />
+						<p>Previous</p>
+					</Button>
+				</Link>
+				<Link href="/docs/button-group">
+					<Button className="flex space-x-2">
+						<p>Next</p>
+						<ArrowRightIcon className="w-5 h-5" />
+					</Button>
+				</Link>
+			</div>
 		</div>
 	);
 }

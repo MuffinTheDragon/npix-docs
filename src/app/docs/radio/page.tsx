@@ -1,11 +1,14 @@
 "use client";
 
+import { Button } from "@/components/Button";
 import { CodeBlock } from "@/components/CodeBlock";
 import { Example } from "@/components/Example";
 import { Radio } from "@/components/Radio";
 import { SimpleTable } from "@/components/SimpleTable";
 import { Switch } from "@/components/Switch";
+import Link from "next/link";
 import { useState } from "react";
+import { ArrowRightIcon, ArrowLeftIcon } from "@heroicons/react/24/solid";
 import reactElementToJSXString from "react-element-to-jsx-string";
 
 export default function Home() {
@@ -51,6 +54,21 @@ export default function Home() {
 			</CodeBlock>
 			<div className="sub-heading">API</div>
 			<SimpleTable data={data} />
+
+			<div className="flex justify-between">
+				<Link href="/docs/popconfirm">
+					<Button className="flex space-x-2">
+						<ArrowLeftIcon className="w-5 h-5" />
+						<p>Previous</p>
+					</Button>
+				</Link>
+				<Link href="/docs/select">
+					<Button className="flex space-x-2">
+						<p>Next</p>
+						<ArrowRightIcon className="w-5 h-5" />
+					</Button>
+				</Link>
+			</div>
 		</div>
 	);
 }

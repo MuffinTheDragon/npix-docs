@@ -15,8 +15,11 @@ import {
 	ExclamationCircleIcon,
 	HeartIcon,
 	TrashIcon,
+	ArrowLeftIcon,
+	ArrowRightIcon,
 } from "@heroicons/react/24/solid";
 import Head from "next/head";
+import Link from "next/link";
 
 Cog6ToothIcon.displayName = "Cog6ToothIcon";
 EnvelopeIcon.displayName = "EnvelopeIcon";
@@ -149,6 +152,21 @@ export default function Home() {
 			</CodeBlock>
 			<div className="sub-heading">API</div>
 			<SimpleTable data={data} />
+
+			<div className="flex justify-between">
+				<Link href="/docs/checkbox">
+					<Button className="flex space-x-2">
+						<ArrowLeftIcon className="w-5 h-5" />
+						<p>Previous</p>
+					</Button>
+				</Link>
+				<Link href="/docs/input">
+					<Button className="flex space-x-2">
+						<p>Next</p>
+						<ArrowRightIcon className="w-5 h-5" />
+					</Button>
+				</Link>
+			</div>
 		</div>
 	);
 }

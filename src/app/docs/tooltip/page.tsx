@@ -7,6 +7,9 @@ import { Select } from "@/components/Select";
 import { useState } from "react";
 import { Example } from "@/components/Example";
 import reactElementToJSXString from "react-element-to-jsx-string";
+import { Button } from "@/components/Button";
+import Link from "next/link";
+import { ArrowLeftIcon } from "@heroicons/react/24/solid";
 
 export default function Home() {
 	const [placement, setPlacement] = useState<
@@ -89,6 +92,15 @@ export default function Home() {
 			</CodeBlock>
 			<div className="sub-heading">API</div>
 			<SimpleTable data={data} />
+
+			<div className="flex justify-between">
+				<Link href="/docs/toast">
+					<Button className="flex space-x-2">
+						<ArrowLeftIcon className="w-5 h-5" />
+						<p>Previous</p>
+					</Button>
+				</Link>
+			</div>
 		</div>
 	);
 }
