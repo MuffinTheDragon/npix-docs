@@ -41,7 +41,11 @@ export default function Home() {
 		},
 	];
 
-	const example = <ButtonComponent {...props}>Save</ButtonComponent>;
+	const example = (
+		<>
+			<ButtonComponent {...props}>Save</ButtonComponent>
+		</>
+	);
 
 	return (
 		<div className="space-y-4">
@@ -118,7 +122,9 @@ export default function Home() {
 			<CodeBlock>npx npix@latest add Button</CodeBlock>
 
 			<div className="sub-heading">Usage</div>
-			<CodeBlock>{reactElementToJSXString(example)}</CodeBlock>
+			<CodeBlock>
+				{reactElementToJSXString(example, { showFunctions: true })}
+			</CodeBlock>
 
 			<div className="sub-heading">API</div>
 			<SimpleTable data={data} />

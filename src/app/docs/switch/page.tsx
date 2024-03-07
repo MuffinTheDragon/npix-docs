@@ -10,11 +10,13 @@ export default function Home() {
 	const [disabled, setDisabled] = useState(false);
 
 	const example = (
-		<Switch
-			checked={checked}
-			disabled={disabled}
-			onChange={() => setChecked(!checked)}
-		/>
+		<>
+			<Switch
+				checked={checked}
+				disabled={disabled}
+				onChange={() => setChecked(!checked)}
+			/>
+		</>
 	);
 
 	return (

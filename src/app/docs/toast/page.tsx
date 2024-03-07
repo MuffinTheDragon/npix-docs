@@ -38,19 +38,24 @@ export default function Home() {
 	];
 
 	const example = (
-		<Button
-			onClick={() =>
-				toast({
-					title: "Form submitted!",
-					placement,
-					icon: (
-						<CheckCircleIcon fill="#76c12b" className="w-6 h-6" />
-					),
-				})
-			}
-		>
-			Try me
-		</Button>
+		<>
+			<Button
+				onClick={() =>
+					toast({
+						title: "Form submitted!",
+						placement,
+						icon: (
+							<CheckCircleIcon
+								fill="#76c12b"
+								className="w-6 h-6"
+							/>
+						),
+					})
+				}
+			>
+				Try me
+			</Button>
+		</>
 	);
 
 	return (
@@ -92,22 +97,19 @@ export default function Home() {
 			<div className="sub-heading">Installation</div>
 			<CodeBlock>npx npix@latest add Toast</CodeBlock>
 			<div className="sub-heading">Usage</div>
-			<CodeBlock>{`<Button
-	onClick={() =>
-        toast({
-            title: "Form submitted!",
-            placement="top-right"
-            icon: (
-                <CheckCircleIcon
-                    fill="#76c12b"
-                    className="w-6 h-6"
-                />
-            ),
-        })
-    }
->
-    Try me
-</Button>`}</CodeBlock>
+			<CodeBlock>{`<>
+	<Button
+		onClick={() =>
+			toast({
+				title: "Form submitted!",
+				placement,
+				icon: <CheckCircleIcon fill="#76c12b" className="w-6 h-6" />,
+			})
+		}
+	>
+		Try me
+	</Button>
+</>`}</CodeBlock>
 			<div className="sub-heading">API</div>
 			<SimpleTable data={data} />
 		</div>

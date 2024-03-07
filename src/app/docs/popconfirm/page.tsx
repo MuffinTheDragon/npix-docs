@@ -77,15 +77,17 @@ export default function Home() {
 	];
 
 	const example = (
-		<Popconfirm
-			title="Confirm Delete"
-			placement={placement}
-			content={"Are you sure you want to delete this?"}
-			onOk={() => {}}
-			onCancel={() => {}}
-		>
-			<Button type="danger">Delete</Button>
-		</Popconfirm>
+		<>
+			<Popconfirm
+				title="Confirm Delete"
+				placement={placement}
+				content={"Are you sure you want to delete this?"}
+				onOk={() => {}}
+				onCancel={() => {}}
+			>
+				<Button type="danger">Delete</Button>
+			</Popconfirm>
+		</>
 	);
 
 	return (

@@ -19,7 +19,11 @@ export default function Home() {
 		},
 	];
 
-	const example = <Spinner size={size} />;
+	const example = (
+		<>
+			<Spinner size={size} />
+		</>
+	);
 	return (
 		<div className="space-y-4">
 			<h1 className="header">Spinner</h1>
@@ -43,7 +47,9 @@ export default function Home() {
 			<div className="sub-heading">Installation</div>
 			<CodeBlock>npx npix@latest add Spinner</CodeBlock>
 			<div className="sub-heading">Usage</div>
-			<CodeBlock>{reactElementToJSXString(example)}</CodeBlock>
+			<CodeBlock>
+				{reactElementToJSXString(example, { showFunctions: true })}
+			</CodeBlock>
 			<div className="sub-heading">API</div>
 			<SimpleTable data={data} />
 		</div>

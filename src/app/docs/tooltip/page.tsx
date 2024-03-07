@@ -38,9 +38,11 @@ export default function Home() {
 	];
 
 	const example = (
-		<Tooltip title="Tooltip content" placement={placement}>
-			Hover here
-		</Tooltip>
+		<>
+			<Tooltip title="Tooltip content" placement={placement}>
+				Hover here
+			</Tooltip>
+		</>
 	);
 
 	return (
@@ -82,7 +84,9 @@ export default function Home() {
 			<div className="sub-heading">Installation</div>
 			<CodeBlock>npx npix@latest add Tooltip</CodeBlock>
 			<div className="sub-heading">Usage</div>
-			<CodeBlock>{reactElementToJSXString(example)}</CodeBlock>
+			<CodeBlock>
+				{reactElementToJSXString(example, { showFunctions: true })}
+			</CodeBlock>
 			<div className="sub-heading">API</div>
 			<SimpleTable data={data} />
 		</div>

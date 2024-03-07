@@ -28,29 +28,35 @@ export default function Home() {
 	];
 
 	const example = (
-		<Card className="space-y-4 w-[400px]" interactive={interactive}>
-			<div>
-				<CardTitle>Sign in</CardTitle>
-				<CardDescription>Use your account</CardDescription>
-			</div>
-			<div className="space-y-2">
-				<label htmlFor="email">Email</label>
-				<Input id="email" type="email" placeholder="Email" />
-				<a href="#" className="text-sm text-indigo-400">
-					Forgot email?
-				</a>
-			</div>
-			<div className="space-y-2">
-				<label htmlFor="password">Password</label>
-				<Input id="password" type="password" placeholder="Password" />
-				<a href="#" className="text-sm text-indigo-400">
-					Forgot password?
-				</a>
-			</div>
-			<div>
-				<Button>Sign in</Button>
-			</div>
-		</Card>
+		<>
+			<Card className="space-y-4 w-[400px]" interactive={interactive}>
+				<div>
+					<CardTitle>Sign in</CardTitle>
+					<CardDescription>Use your account</CardDescription>
+				</div>
+				<div className="space-y-2">
+					<label htmlFor="email">Email</label>
+					<Input id="email" type="email" placeholder="Email" />
+					<a href="#" className="text-sm text-indigo-400">
+						Forgot email?
+					</a>
+				</div>
+				<div className="space-y-2">
+					<label htmlFor="password">Password</label>
+					<Input
+						id="password"
+						type="password"
+						placeholder="Password"
+					/>
+					<a href="#" className="text-sm text-indigo-400">
+						Forgot password?
+					</a>
+				</div>
+				<div>
+					<Button>Sign in</Button>
+				</div>
+			</Card>
+		</>
 	);
 
 	return (
@@ -71,7 +77,9 @@ export default function Home() {
 			<div className="sub-heading">Installation</div>
 			<CodeBlock>npx npix@latest add Card</CodeBlock>
 			<div className="sub-heading">Usage</div>
-			<CodeBlock>{reactElementToJSXString(example)}</CodeBlock>
+			<CodeBlock>
+				{reactElementToJSXString(example, { showFunctions: true })}
+			</CodeBlock>
 			<div className="sub-heading">API</div>
 			<SimpleTable data={data} />
 		</div>

@@ -1,12 +1,7 @@
 "use client";
 
 import { CodeBlock } from "@/components/CodeBlock";
-import {
-	Drawer,
-	DrawerDescription,
-	DrawerProps,
-	DrawerTitle,
-} from "@/components/Drawer";
+import { Drawer, DrawerDescription, DrawerTitle } from "@/components/Drawer";
 import { Select } from "@/components/Select";
 import { SimpleTable } from "@/components/SimpleTable";
 import { Switch } from "@/components/Switch";
@@ -20,8 +15,14 @@ import {
 	ExclamationCircleIcon,
 	HeartIcon,
 	TrashIcon,
-	XMarkIcon,
 } from "@heroicons/react/24/solid";
+import Head from "next/head";
+
+Cog6ToothIcon.displayName = "Cog6ToothIcon";
+EnvelopeIcon.displayName = "EnvelopeIcon";
+ExclamationCircleIcon.displayName = "ExclamationCircleIcon";
+HeartIcon.displayName = "HeartIcon";
+TrashIcon.displayName = "TrashIcon";
 
 export default function Home() {
 	const [open, setOpen] = useState(false);
@@ -101,6 +102,9 @@ export default function Home() {
 	);
 	return (
 		<div className="space-y-4">
+			<Head>
+				<title>alsdkmads</title>
+			</Head>
 			<h1 className="header">Drawer</h1>
 			<div className="sub-heading">Example</div>
 			<div className="pt-2">

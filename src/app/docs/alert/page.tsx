@@ -82,7 +82,9 @@ export default function Alert() {
 			<CodeBlock>npx npix@latest add Alert</CodeBlock>
 
 			<div className="sub-heading">Usage</div>
-			<CodeBlock>{reactElementToJSXString(example)}</CodeBlock>
+			<CodeBlock>
+				{reactElementToJSXString(example, { showFunctions: true })}
+			</CodeBlock>
 
 			<div className="sub-heading">API</div>
 			<SimpleTable data={data} />

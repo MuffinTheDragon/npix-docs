@@ -13,11 +13,13 @@ export default function Home() {
 	const [props, setProps] = useState<ButtonProps>();
 
 	const example = (
-		<ButtonGroup>
-			<ButtonGroupButton {...props}>One</ButtonGroupButton>
-			<ButtonGroupButton {...props}>Two</ButtonGroupButton>
-			<ButtonGroupButton {...props}>Three</ButtonGroupButton>
-		</ButtonGroup>
+		<>
+			<ButtonGroup>
+				<ButtonGroupButton {...props}>One</ButtonGroupButton>
+				<ButtonGroupButton {...props}>Two</ButtonGroupButton>
+				<ButtonGroupButton {...props}>Three</ButtonGroupButton>
+			</ButtonGroup>
+		</>
 	);
 	return (
 		<div className="space-y-4">
@@ -90,7 +92,9 @@ export default function Home() {
 			<div className="sub-heading">Installation</div>
 			<CodeBlock>npx npix@latest add ButtonGroup</CodeBlock>
 			<div className="sub-heading">Usage</div>
-			<CodeBlock>{reactElementToJSXString(example)}</CodeBlock>
+			<CodeBlock>
+				{reactElementToJSXString(example, { showFunctions: true })}
+			</CodeBlock>
 			<div className="sub-heading">API</div>
 			<p>
 				Each <code>ButtonGroupButton</code> is the regular{" "}
